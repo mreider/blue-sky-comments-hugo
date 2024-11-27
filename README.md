@@ -10,7 +10,7 @@ Add the Module as a Dependency In your Hugo site’s config.toml:
 ```
 module:
   imports:
-    - path: github.com/your-username/hugo-module-bluesky-comments
+    - path: github.com/mreider/hugo-bluesky-comments
 ```
 
 Add the Partial to Your Templates Include the comment.html partial in your post layout (e.g., single.html):
