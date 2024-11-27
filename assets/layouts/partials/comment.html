@@ -1,0 +1,15 @@
+<div id="bluesky-comments" class="comments"></div>
+
+<script src="{{ "js/bluesky-comments.js" | resources.Get | fingerprint | relURL }}"></script>
+<link rel="stylesheet" href="{{ "css/bluesky-comments.css" | resources.Get | fingerprint | relURL }}">
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const uri = '{{ .Params.blueskyUri }}'; // Define the post URI in your front matter
+        if (uri) {
+            window.initBlueskyComments('bluesky-comments', { uri });
+        } else {
+            console.error("No Bluesky URI found for this post.");
+        }
+    });
+</script>
